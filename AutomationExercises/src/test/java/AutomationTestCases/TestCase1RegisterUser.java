@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class TestCase1 {
+public class TestCase1RegisterUser {
     public static void main(String[] args) {
         ChromeOptions options = new ChromeOptions();
         WebDriver driver = new ChromeDriver(options);
