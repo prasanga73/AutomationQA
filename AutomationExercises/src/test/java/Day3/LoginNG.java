@@ -46,7 +46,7 @@ public class LoginNG {
         driver.findElement(By.cssSelector("a[href='/login']")).click();
 
         driver.findElement(By.cssSelector("input[data-qa='login-email']")).sendKeys("preksha34@gmail.com");
-        driver.findElement(By.cssSelector("input[placeholder='Password']")).sendKeys("preksha34");
+        driver.findElement(By.cssSelector("input[placeholder='Password']")).sendKeys("prekshaa");
 
         driver.findElement(By.cssSelector("button[data-qa='login-button']")).click();
 
