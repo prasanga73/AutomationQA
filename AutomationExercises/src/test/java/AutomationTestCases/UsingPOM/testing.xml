@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Automation Exercise Suite">
+
+    <test name="Login Test">
+
+        <classes>
+            <class name="AutomationTestCases.UsingPOM.TestCase1.TestCase1RegisterUser" />
+            <class name="AutomationTestCases.UsingPOM.TestCase2.TestCase2ValidLogin" />
+        </classes>
+
+
+    </test>
+
+</suite>
