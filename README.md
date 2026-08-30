@@ -1,49 +1,52 @@
 # 🛠️ Automation QA Training Workspace
 
-This repository contains learning exercises, homework assignments, and automation test suites developed during the **Software Quality Assurance (QA) & Automation** course at [TechAxis](https://techaxis.com.np/) (Kumaripati, Lalitpur, Nepal).
-
-As a living workspace, this project will evolve over time to include more advanced testing practices, patterns, and frameworks.
+This repository serves as a structured workspace containing learning exercises, assignments, and test automation scripts developed during the **Software Quality Assurance (QA) & Automation** course at [TechAxis](https://techaxis.com.np/) (Kumaripati, Lalitpur, Nepal).
 
 ---
 
 ## 📂 Project Modules
 
-At a high level, the workspace is divided into:
+The workspace is organized into two core modules:
 
-*   **`JavaBasics/`**: Focuses on core Java programming fundamentals and Object-Oriented Programming (OOP) principles (Encapsulation, Inheritance, Abstraction, Polymorphism).
-*   **`AutomationExercises/`**: A Maven-based test suite containing web UI automation scenarios, locators, and assertions.
-    *   **`AutomationTestCases/UsingPOM/`**: Implementation of automation test cases leveraging the **Page Object Model (POM)** architecture and **TestNG** framework:
-        *   **`BaseClass.java`**: Handles driver initialization, window maximization, cookies deletion, and teardown.
-        *   **`TestCase1/`**: Contains `TestCase1RegisterUser.java` (TestNG test class) and `TestCase1Page.java` (Page Object class encapsulating elements and actions).
-        *   **`TestCase2/`**: Contains `TestCase2ValidLogin.java` (TestNG test class) and `TestCase2Page.java` (Page Object class encapsulating elements and actions).
+### 1. ☕ `JavaBasics/`
+Focuses on core Java programming fundamentals and Object-Oriented Programming (OOP) concepts (Inheritance, Polymorphism, Abstraction, and Encapsulation) through practical class design and homework assignments.
+
+### 2. 🧪 `AutomationExercises/`
+A Maven-based test automation project targeting the [Automation Exercise](https://automationexercise.com) web application using Selenium WebDriver and TestNG.
+*   **Daily Practice (`Day1` - `Day4`)**: Hands-on exercises covering browser setup (including Brave and Chrome), basic Selenium actions, TestNG annotations, and an initial introduction to the Page Object Model.
+*   **Without POM Test Cases**: Baseline procedural scripts demonstrating direct page interaction and locator strategies.
+*   **Using POM Test Cases**: Production-ready automation scripts structured around the **Page Object Model (POM)** pattern. Page locators and actions are decoupled from test scripts, and executions are orchestrated via a centralized TestNG suite.
 
 ---
 
 ## ⚡ Tech Stack
 
-*   **Programming Language:** Java
+*   **Language:** Java
 *   **Web Automation:** Selenium WebDriver
-*   **Test Runner:** TestNG
+*   **Testing Framework:** TestNG
 *   **Build Tool:** Maven
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started & Execution
 
 ### Prerequisites
-*   Java Development Kit (JDK)
+*   Java Development Kit (JDK 17 or higher)
 *   Apache Maven
-*   Chrome / Brave Browser and Chrome WebDriver
+*   Chrome or Brave Browser
 
 ### Running the Automation Tests
-Navigate to the automation module directory and execute the TestNG tests:
+Navigate to the automation module directory and execute the tests:
+
 ```bash
 cd AutomationExercises
-mvn clean test
 ```
 
-To run only the Page Object Model (POM) test cases:
-```bash
-cd AutomationExercises
-mvn test -Dtest=TestCase1RegisterUser,TestCase2ValidLogin
-```
+*   **Run all tests:**
+    ```bash
+    mvn clean test
+    ```
+*   **Run via TestNG Suite configuration (POM Tests):**
+    ```bash
+    mvn test -DsuiteXmlFile=src/test/java/AutomationTestCases/UsingPOM/testing.xml
+    ```
