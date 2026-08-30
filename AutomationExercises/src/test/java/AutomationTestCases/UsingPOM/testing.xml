@@ -5,11 +5,9 @@
     <test name="Login Test">
 
         <classes>
-            <class name="AutomationTestCases.UsingPOM.TestCase1.TestCase1RegisterUser" />
-            <class name="AutomationTestCases.UsingPOM.TestCase2.TestCase2ValidLogin" />
+            <class name="AutomationTestCases.UsingPOM.TestCase1Register.TestCase1RegisterUser" />
+            <class name="AutomationTestCases.UsingPOM.TestCase2ValidLogin.TestCase2ValidLogin" />
         </classes>
-
-
     </test>
 
 </suite>

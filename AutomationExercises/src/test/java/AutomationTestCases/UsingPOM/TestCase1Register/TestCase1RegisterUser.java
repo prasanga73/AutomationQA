@@ -1,4 +1,4 @@
-package AutomationTestCases.UsingPOM.TestCase1;
+package AutomationTestCases.UsingPOM.TestCase1Register;
 
 import AutomationTestCases.UsingPOM.BaseClass;
 import org.testng.Assert;

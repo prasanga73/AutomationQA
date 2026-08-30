@@ -1,4 +1,4 @@
-package AutomationTestCases.UsingPOM.TestCase1;
+package AutomationTestCases.UsingPOM.TestCase1Register;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

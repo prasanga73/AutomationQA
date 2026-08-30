@@ -1,10 +1,10 @@
-package AutomationTestCases.UsingPOM.TestCase2;
+package AutomationTestCases.UsingPOM.TestCase2ValidLogin;
 
 import AutomationTestCases.UsingPOM.BaseClass;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestCase2ValidLogin extends BaseClass {
+public class TestCase2ValidUserLogin extends BaseClass {
 
     @Test
     public void validLoginTest() {
