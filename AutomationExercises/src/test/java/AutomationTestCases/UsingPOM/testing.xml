@@ -6,7 +6,11 @@
 
         <classes>
             <class name="AutomationTestCases.UsingPOM.TestCase1Register.TestCase1RegisterUser" />
-            <class name="AutomationTestCases.UsingPOM.TestCase2ValidLogin.TestCase2ValidLogin" />
+            <class name="AutomationTestCases.UsingPOM.TestCase2ValidLogin.TestCase2ValidUserLogin" />
+            <class name="AutomationTestCases.UsingPOM.TestCase3InvalidLogin.TestCase3InvalidUserLogin"/>
+            <class name="AutomationTestCases.UsingPOM.TestCase4LogOut.TestCase4UserLogOut"/>
+            <class name="AutomationTestCases.UsingPOM.TestCase5RegisteredUser.TestCase5ExistingRegister"/>
+
         </classes>
     </test>
 
