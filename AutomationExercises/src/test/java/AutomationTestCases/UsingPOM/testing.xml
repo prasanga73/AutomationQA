@@ -2,7 +2,7 @@
 
 <suite name="Automation Exercise Suite">
     <listeners>
-<!--        <listener class-name="AutomationTestCases.UsingPOM.Utilities.CustomTestListener"/>-->
+        <listener class-name="AutomationTestCases.UsingPOM.Utilities.CustomTestListener"/>
         <listener class-name="AutomationTestCases.UsingPOM.Utilities.ExtentReporterManager"/>
     </listeners>
 

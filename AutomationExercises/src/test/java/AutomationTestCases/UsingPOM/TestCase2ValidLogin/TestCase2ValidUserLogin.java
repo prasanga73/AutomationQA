@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class TestCase2ValidUserLogin extends BaseClass {
 
-    @Test
+    @Test(groups = {"regression","smoke"})
     public void validLoginTest() {
         TestCase2Page page = new TestCase2Page(driver);
 

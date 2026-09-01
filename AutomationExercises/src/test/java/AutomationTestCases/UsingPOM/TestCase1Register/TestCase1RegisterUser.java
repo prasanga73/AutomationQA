@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class TestCase1RegisterUser extends BaseClass {
 
-    @Test
+    @Test(groups = {"regression","smoke"})
     public void registerUserTest() {
         TestCase1Page page = new TestCase1Page(driver);
 

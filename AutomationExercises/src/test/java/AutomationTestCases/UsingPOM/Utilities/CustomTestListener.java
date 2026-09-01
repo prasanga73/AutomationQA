@@ -14,12 +14,12 @@ public class CustomTestListener implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        System.out.println("Test passed: " + result.getTestClass().getName() + " -- " + result.getMethod().getMethodName());
+        System.out.println("✅ Test passed: " + result.getTestClass().getName() + " -- " + result.getMethod().getMethodName());
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        System.out.println("Test failed: " + result.getTestClass().getName() + " -- " + result.getMethod().getMethodName());
+        System.out.println("❌ Test failed: " + result.getTestClass().getName() + " -- " + result.getMethod().getMethodName());
     }
 
     @Override

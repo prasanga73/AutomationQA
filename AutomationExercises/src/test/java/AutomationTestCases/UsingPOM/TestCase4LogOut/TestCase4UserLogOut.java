@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class TestCase4UserLogOut extends BaseClass {
 
-    @Test
+    @Test(groups = {"smoke"})
     public void LogOutTest() {
         TestCase4Page page = new TestCase4Page(driver);
 
