@@ -2,6 +2,7 @@ package AutomationTestCases.UsingPOM;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
@@ -12,7 +13,11 @@ public class BaseClass {
     @SuppressWarnings("null")
     @BeforeMethod
     public void setupBrowser() {
-        driver = new ChromeDriver();
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
