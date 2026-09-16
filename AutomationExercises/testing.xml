@@ -2,8 +2,8 @@
 
 <suite name="Automation Exercise Suite">
     <listeners>
-        <listener class-name="AutomationTestCases.UsingPOM.Utilities.CustomTestListener"/>
-        <listener class-name="AutomationTestCases.UsingPOM.Utilities.ExtentReporterManager"/>
+<!--        <listener class-name="AutomationTestCases.UsingPOM.Utilities.CustomTestListener"/>-->
+        <listener class-name="AutomationTestCases.UsingPOM.Utilities.ExtentReporterManagerSS"/>
     </listeners>
 
     <test name="Login Test">

@@ -10,16 +10,21 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import java.awt.*;
-import java.io.File;
+
+import AutomationTestCases.UsingPOM.BaseClass;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.awt.*;
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ExtentReporterManager implements ITestListener {
+public class ExtentReporterManagerSS implements ITestListener {
 
     public ExtentSparkReporter sparkReporter; //UI of the report
     public ExtentReports extent; //populate common info on the report (eg : testername , operatingsystemname , testername , environment report...)
@@ -28,12 +33,11 @@ public class ExtentReporterManager implements ITestListener {
     private String repName;
 
 
-    @Override
-    //@Override is a Java annotation. It tells the compiler that this method is overriding (replacing) a method from a parent class or interface.
+    @Override  //@Override is a Java annotation. It tells the compiler that this method is overriding (replacing) a method from a parent class or interface.
     public void onStart(ITestContext testContext) {
         // specify location of the report
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-        repName = "Test-Report-" + timeStamp + ".html";
+        repName="Test-Report-" + timeStamp + ".html";
         Path reportDirectory = Paths.get(System.getProperty("user.dir"), "reports");
         try {
             Files.createDirectories(reportDirectory);
@@ -44,7 +48,7 @@ public class ExtentReporterManager implements ITestListener {
 
         sparkReporter.config().setDocumentTitle("Automation Report"); // Tile of report
         sparkReporter.config().setReportName("Functional Testing"); // Name of the report
-        sparkReporter.config().setTheme(Theme.STANDARD);
+        sparkReporter.config().setTheme(Theme.DARK);
 
         extent = new ExtentReports();
         extent.attachReporter(sparkReporter);
@@ -53,34 +57,71 @@ public class ExtentReporterManager implements ITestListener {
         extent.setSystemInfo("Computer name", "localhost");
         extent.setSystemInfo("Environment", "QA");
         extent.setSystemInfo("user", "Prasanga");
-        extent.setSystemInfo("os", "Linux Debian 13");
-        extent.setSystemInfo("Browser name", "Chrome");
+        extent.setSystemInfo("os","Linux Debian");
+        extent.setSystemInfo("Browser name","Chrome");
 
     }
 
+
     @Override
-    public void onTestSuccess(ITestResult result) {
+    public void onTestSuccess(ITestResult result){
         //create a new entry in the report
         test = extent.createTest(result.getTestClass().getName() + " -- " + result.getMethod().getMethodName());
         test.assignCategory(result.getMethod().getGroups());//to display group reports
-        test.log(Status.PASS, result.getName() + " get successfully executed.");
+        test.log(Status.PASS,result.getName()+ " get successfully executed.");
+    }
+
+    // Method to capture screenshot
+    public String captureScreenshot(String testName) {
+
+        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss")
+                .format(new Date());
+
+        Path screenshotDirectory = Paths.get(System.getProperty("user.dir"), "screenshots");
+        Path screenshotPath = screenshotDirectory.resolve(testName + "_" + timeStamp + ".png");
+
+        try {
+            File source = ((TakesScreenshot) BaseClass.driver)
+                    .getScreenshotAs(OutputType.FILE);
+
+            Files.createDirectories(screenshotDirectory);
+            File destination = screenshotPath.toFile();
+
+            Files.copy(source.toPath(), destination.toPath());
+
+        } catch (IOException e) {
+            System.out.println("Screenshot failed: " + e.getMessage());
+        }
+
+        return screenshotPath.toString();
     }
 
     @Override
-    public void onTestFailure(ITestResult result) {
-        test = extent.createTest(result.getTestClass().getName() + " -- " + result.getMethod().getMethodName()); //Create test entry in report
+    public void onTestFailure(ITestResult result){
+        test = extent.createTest(result.getTestClass().getName() + " -- " +result.getMethod().getMethodName()); //Create test entry in report
         test.assignCategory(result.getMethod().getGroups());
-        test.log(Status.FAIL, result.getName() + "got failed."); //Log failure status
-        test.log(Status.INFO, result.getThrowable().getMessage()); //Log Error Messgae
+        test.log(Status.FAIL,result.getName() + "got failed."); //Log failure status
+        test.log(Status.INFO,result.getThrowable().getMessage()); //Log Error Messgae
+
+        // Capture Screenshot
+        String screenshotPath = captureScreenshot(result.getMethod().getMethodName());
+
+        try {
+            // Attach screenshot to Extent Report
+            test.addScreenCaptureFromPath(screenshotPath);
+        } catch (Exception e) {
+            test.log(Status.INFO, "Screenshot not attached.");
+        }
     }
 
     @Override
-    public void onTestSkipped(ITestResult result) {
+    public void onTestSkipped(ITestResult result){
         test = extent.createTest(result.getTestClass().getName() + " -- " + result.getMethod().getMethodName());
         test.assignCategory(result.getMethod().getGroups());
-        test.log(Status.SKIP, result.getName() + "got skipped");
-        test.log(Status.INFO, result.getThrowable().getMessage());
+        test.log(Status.SKIP, result.getName()+ "got skipped");
+        test.log(Status.INFO,result.getThrowable().getMessage());
     }
+
 
     @Override
     public void onFinish(ITestContext testContext) {
@@ -94,6 +135,9 @@ public class ExtentReporterManager implements ITestListener {
         System.out.println("Report Path: " + reportPath);
 
         File reportFile = new File(reportPath);
+
+        // Send report through email
+        EmailsUtils.sendTestReportEmail(reportPath);
 
         System.out.println(reportFile.getAbsolutePath());
         System.out.println(reportFile.exists());

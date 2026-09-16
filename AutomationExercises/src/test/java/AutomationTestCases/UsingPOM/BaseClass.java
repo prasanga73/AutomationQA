@@ -7,8 +7,9 @@ import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
 
 public class BaseClass {
-    public WebDriver driver;
+    public static WebDriver driver;
 
+    @SuppressWarnings("null")
     @BeforeMethod
     public void setupBrowser() {
         driver = new ChromeDriver();

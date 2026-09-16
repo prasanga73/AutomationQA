@@ -11,7 +11,7 @@
 <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
-<style type="text/css"></style></head><body class="spa -report standard">
+<style type="text/css"></style></head><body class="spa -report dark">
   <div class="app">
     <div class="layout">
 <div class="header navbar">
@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Functional Testing</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Aug 31, 2026 10:04:06 am</span></a>
+<a href="#"><span class="badge badge-primary">Sept 11, 2026 02:35:43 pm</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -71,17 +76,23 @@
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
 </li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">regression</a><a class="dropdown-item" href="#">smoke</a>
+</ul>
+</li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
         <li class="test-item"  status="pass" test-id="1"
           author=""
-          tag=""
+          tag="regression smoke"
           device="">
           <div class="test-detail">
             <p class="name">AutomationTestCases.UsingPOM.TestCase1Register.TestCase1RegisterUser -- registerUserTest</p>
             <p class="text-sm">
-              <span>10:04:30</span> / <span>00:00:00:002</span>
+              <span>14:36:32</span> / <span>00:00:00:017</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -90,14 +101,16 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">AutomationTestCases.UsingPOM.TestCase1Register.TestCase1RegisterUser -- registerUserTest</h5>
-<span class='badge badge-success'>08.31.2026 10:04:30</span>
-<span class='badge badge-danger'>08.31.2026 10:04:30</span>
-<span class='badge badge-default'>00:00:00:002</span>
+<span class='badge badge-success'>09.11.2026 14:36:32</span>
+<span class='badge badge-danger'>09.11.2026 14:36:32</span>
+<span class='badge badge-default'>00:00:00:017</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">regression</span>
+<span class="badge badge-pill badge-default">smoke</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -105,7 +118,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:04:30</td>
+        <td>14:36:32</td>
         <td>
           registerUserTest get successfully executed.
         </td>
@@ -117,12 +130,12 @@
         </li>
         <li class="test-item"  status="pass" test-id="2"
           author=""
-          tag=""
+          tag="regression smoke"
           device="">
           <div class="test-detail">
             <p class="name">AutomationTestCases.UsingPOM.TestCase2ValidLogin.TestCase2ValidUserLogin -- validLoginTest</p>
             <p class="text-sm">
-              <span>10:04:36</span> / <span>00:00:00:000</span>
+              <span>14:36:47</span> / <span>00:00:00:001</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -131,14 +144,16 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">AutomationTestCases.UsingPOM.TestCase2ValidLogin.TestCase2ValidUserLogin -- validLoginTest</h5>
-<span class='badge badge-success'>08.31.2026 10:04:36</span>
-<span class='badge badge-danger'>08.31.2026 10:04:36</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>09.11.2026 14:36:47</span>
+<span class='badge badge-danger'>09.11.2026 14:36:47</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">regression</span>
+<span class="badge badge-pill badge-default">smoke</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -146,7 +161,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:04:36</td>
+        <td>14:36:47</td>
         <td>
           validLoginTest get successfully executed.
         </td>
@@ -158,12 +173,12 @@
         </li>
         <li class="test-item"  status="pass" test-id="3"
           author=""
-          tag=""
+          tag="regression smoke"
           device="">
           <div class="test-detail">
             <p class="name">AutomationTestCases.UsingPOM.TestCase3InvalidLogin.TestCase3InvalidUserLogin -- InvalidLoginTest</p>
             <p class="text-sm">
-              <span>10:04:44</span> / <span>00:00:00:000</span>
+              <span>14:36:59</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -172,14 +187,16 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">AutomationTestCases.UsingPOM.TestCase3InvalidLogin.TestCase3InvalidUserLogin -- InvalidLoginTest</h5>
-<span class='badge badge-success'>08.31.2026 10:04:44</span>
-<span class='badge badge-danger'>08.31.2026 10:04:44</span>
+<span class='badge badge-success'>09.11.2026 14:36:59</span>
+<span class='badge badge-danger'>09.11.2026 14:36:59</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">regression</span>
+<span class="badge badge-pill badge-default">smoke</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -187,7 +204,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:04:44</td>
+        <td>14:36:59</td>
         <td>
           InvalidLoginTest get successfully executed.
         </td>
@@ -199,12 +216,12 @@
         </li>
         <li class="test-item"  status="pass" test-id="4"
           author=""
-          tag=""
+          tag="smoke"
           device="">
           <div class="test-detail">
             <p class="name">AutomationTestCases.UsingPOM.TestCase4LogOut.TestCase4UserLogOut -- LogOutTest</p>
             <p class="text-sm">
-              <span>10:04:52</span> / <span>00:00:00:000</span>
+              <span>14:37:21</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -213,14 +230,15 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">AutomationTestCases.UsingPOM.TestCase4LogOut.TestCase4UserLogOut -- LogOutTest</h5>
-<span class='badge badge-success'>08.31.2026 10:04:52</span>
-<span class='badge badge-danger'>08.31.2026 10:04:52</span>
+<span class='badge badge-success'>09.11.2026 14:37:21</span>
+<span class='badge badge-danger'>09.11.2026 14:37:21</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">smoke</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -228,7 +246,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:04:52</td>
+        <td>14:37:21</td>
         <td>
           LogOutTest get successfully executed.
         </td>
@@ -240,12 +258,12 @@
         </li>
         <li class="test-item"  status="pass" test-id="5"
           author=""
-          tag=""
+          tag="regression"
           device="">
           <div class="test-detail">
             <p class="name">AutomationTestCases.UsingPOM.TestCase5RegisteredUser.TestCase5ExistingRegister -- ExistingUserTest</p>
             <p class="text-sm">
-              <span>10:04:58</span> / <span>00:00:00:000</span>
+              <span>14:37:31</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -254,14 +272,15 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">AutomationTestCases.UsingPOM.TestCase5RegisteredUser.TestCase5ExistingRegister -- ExistingUserTest</h5>
-<span class='badge badge-success'>08.31.2026 10:04:58</span>
-<span class='badge badge-danger'>08.31.2026 10:04:58</span>
+<span class='badge badge-success'>09.11.2026 14:37:31</span>
+<span class='badge badge-danger'>09.11.2026 14:37:31</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">regression</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -269,7 +288,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:04:58</td>
+        <td>14:37:31</td>
         <td>
           ExistingUserTest get successfully executed.
         </td>
@@ -288,18 +307,142 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+</span>
+<p class="name">regression</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>regression</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:36:32 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>AutomationTestCases.UsingPOM.TestCase1Register.TestCase1RegisterUser -- registerUserTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:36:47 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>AutomationTestCases.UsingPOM.TestCase2ValidLogin.TestCase2ValidUserLogin -- validLoginTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:36:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>AutomationTestCases.UsingPOM.TestCase3InvalidLogin.TestCase3InvalidUserLogin -- InvalidLoginTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:37:31 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>AutomationTestCases.UsingPOM.TestCase5RegisteredUser.TestCase5ExistingRegister -- ExistingUserTest</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+</span>
+<p class="name">smoke</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>smoke</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:36:32 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>AutomationTestCases.UsingPOM.TestCase1Register.TestCase1RegisterUser -- registerUserTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:36:47 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>AutomationTestCases.UsingPOM.TestCase2ValidLogin.TestCase2ValidUserLogin -- validLoginTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:36:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>AutomationTestCases.UsingPOM.TestCase3InvalidLogin.TestCase3InvalidUserLogin -- InvalidLoginTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:37:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>AutomationTestCases.UsingPOM.TestCase4LogOut.TestCase4UserLogOut -- LogOutTest</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Aug 31, 2026 10:04:06 am</h3>
+<h3>Sept 11, 2026 02:35:43 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Aug 31, 2026 10:04:58 am</h3>
+<h3>Sept 11, 2026 02:37:31 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -369,10 +512,35 @@
 </div></div>
 <script>
 var timeline = {
-"AutomationTestCases.UsingPOM.TestCase1Register.TestCase1RegisterUser -- registerUserTest":0.002,"AutomationTestCases.UsingPOM.TestCase2ValidLogin.TestCase2ValidUserLogin -- validLoginTest":0,"AutomationTestCases.UsingPOM.TestCase3InvalidLogin.TestCase3InvalidUserLogin -- InvalidLoginTest":0,"AutomationTestCases.UsingPOM.TestCase4LogOut.TestCase4UserLogOut -- LogOutTest":0,"AutomationTestCases.UsingPOM.TestCase5RegisteredUser.TestCase5ExistingRegister -- ExistingUserTest":0
+"AutomationTestCases.UsingPOM.TestCase1Register.TestCase1RegisterUser -- registerUserTest":0.017,"AutomationTestCases.UsingPOM.TestCase2ValidLogin.TestCase2ValidUserLogin -- validLoginTest":0.001,"AutomationTestCases.UsingPOM.TestCase3InvalidLogin.TestCase3InvalidUserLogin -- InvalidLoginTest":0,"AutomationTestCases.UsingPOM.TestCase4LogOut.TestCase4UserLogOut -- LogOutTest":0,"AutomationTestCases.UsingPOM.TestCase5RegisteredUser.TestCase5ExistingRegister -- ExistingUserTest":0
 };
 </script>
 <div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>regression</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>smoke</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 <div class="col-lg-6 col-md-12 sysenv-container">
 <div class="card">
 <div class="card-header"><p>System/Environment</p></div>
@@ -393,7 +561,7 @@ var timeline = {
 </tr>
 <tr>
 <td>os</td>
-<td>Linux Debian 13</td>
+<td>Linux Debian</td>
 </tr>
 <tr>
 <td>Browser name</td>
